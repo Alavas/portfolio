@@ -1,0 +1,368 @@
+html {
+	overflow: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+	background: #ff0000;
+}
+
+body {
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 5px;
+	padding: 0px;
+	font-weight: normal;
+	cursor: default;
+}
+
+ul {
+	margin: 0px;
+	//padding-left: 5px;
+	font-weight: normal;
+	cursor: default;
+}
+
+a {
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.portfolio {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	padding: 0;
+	margin: 0;
+}
+
+.portfolio-footer {
+	height: 85px;
+	background: black;
+	position: relative;
+	.email-address {
+		font-size: 1.3em;
+		position: absolute;
+		left: 15px;
+		bottom: 50%;
+		transform: translate(0%, 50%);
+		color: whitesmoke;
+		a {
+			text-decoration: none;
+			color: whitesmoke;
+		}
+	}
+}
+
+//Signature styles.
+.signature-center {
+	display: block !important;
+	img {
+		transition: all 0.75s;
+		transition-timing-function: cubic-bezier(0.49, 0, 0.49, 0.75);
+		width: 523px;
+		height: 150px;
+		position: absolute;
+		z-index: 999;
+		bottom: 50%;
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+}
+
+.signature-small {
+	img {
+		transition: all 0.75s;
+		transition-timing-function: cubic-bezier(0.49, 0, 0.49, 0.75);
+		width: auto;
+		height: 65px;
+		position: fixed;
+		z-index: 999;
+		bottom: 10px;
+		right: 30px;
+	}
+}
+//Image settings.
+.bg-image {
+	height: 100%;
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+.screenshot {
+	height: 100%;
+	img {
+		max-height: 100%;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		object-fit: contain;
+	}
+}
+
+//Project grid.
+.project-grid {
+	display: grid;
+	grid-template-columns: 0.75fr 3fr 50px 3fr 0.75fr;
+	grid-template-rows: 1fr 3fr 50px 3fr 1fr;
+	align-items: center;
+}
+
+.top-screenshot {
+	position: relative;
+	min-height: 0;
+	min-width: 0;
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+.top-description {
+	min-height: 0;
+	min-width: 0;
+	color: whitesmoke;
+	text-align: justify;
+	grid-area: 2 / 4 / 3 / 5;
+}
+
+.bottom-screenshot {
+	position: relative;
+	min-height: 0;
+	min-width: 0;
+	grid-area: 4 / 2 / 5 / 3;
+}
+
+.bottom-description {
+	min-height: 0;
+	min-width: 0;
+	color: whitesmoke;
+	text-align: justify;
+	grid-area: 4 / 4 / 5 / 5;
+}
+
+//Resume grid.
+.resume-grid {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 2fr;
+	grid-template-rows: 10px 2fr 2fr 1fr 40px;
+	align-items: center;
+}
+
+.about {
+	min-height: 0;
+	min-width: 0;
+	text-align: left;
+	color: whitesmoke;
+	grid-area: 2 / 2 / 3 / 4;
+}
+
+.resume {
+	min-height: 0;
+	min-width: 0;
+	text-align: left;
+	color: whitesmoke;
+	grid-area: 2 / 2 / 7 / 4;
+}
+.skills {
+	color: whitesmoke;
+	text-align: left;
+	grid-area: 8 / 2 / 9 / 4;
+	.skill {
+		margin-bottom: 6px;
+		float: left;
+		display: block;
+		background: #26a69a;
+		min-width: 3rem;
+		padding: 0 5px;
+		margin-right: 7px;
+		text-align: center;
+		font-size: 0.8rem;
+		line-height: 20px;
+		height: 20px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		border-radius: 2px;
+	}
+}
+
+//Parallax settings.
+.parallax {
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+}
+
+.parallax_group {
+	position: relative;
+	height: 500px; /* fallback for older browsers */
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.parallax_layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.parallax_layer-fore {
+	-webkit-transform: translateZ(90px) scale(0.7);
+	transform: translateZ(90px) scale(0.7);
+	z-index: 1;
+}
+
+.parallax_layer-base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	z-index: 4;
+}
+
+#scrollBtn {
+	display: block;
+	color: whitesmoke;
+	position: absolute;
+	z-index: 999;
+	bottom: 10%;
+	right: 50%;
+	transform: translate(50%, 50%);
+}
+
+.flash-pulse {
+	-webkit-animation: fp linear 2s infinite;
+	animation: fp linear 2s infitie;
+}
+
+@-webkit-keyframes fp {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fp {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 0.9em;
+		line-height: 0.9em;
+	}
+	//Signature styles.
+	.signature-center {
+		img {
+			width: 85vw;
+			height: auto;
+		}
+	}
+	.signature-small {
+		img {
+			height: 30px;
+			bottom: 5px;
+			right: 5px;
+		}
+	}
+
+	.bg-image {
+		img {
+			object-position: 53% 50%;
+		}
+	}
+	//Project grid.
+	.project-grid {
+		grid-template-columns: 10px 1fr 1fr 10px;
+		grid-template-rows: 10px 1fr 5px 1fr 5px 1fr 5px 1fr 10px;
+	}
+
+	.top-screenshot {
+		grid-area: 4 / 2 / 5 / 4;
+	}
+
+	.top-description {
+		background: none;
+		color: whitesmoke;
+		grid-area: 2 / 2 / 3 / 4;
+	}
+
+	.bottom-screenshot {
+		grid-area: 8 / 2 / 9 / 4;
+	}
+
+	.bottom-description {
+		background: none;
+		color: whitesmoke;
+		grid-area: 6 / 2 / 7 / 4;
+	}
+
+	.portfolio-footer {
+		height: 40px;
+		background: black;
+	}
+
+	.resume-grid {
+		grid-template-columns: 10px 1fr 1fr 10px;
+		grid-template-rows: 10px 2fr 2fr 1fr 40px;
+	}
+
+	.about {
+		grid-area: 2 / 2 / 3 / 4;
+	}
+
+	.resume {
+		grid-area: 3 / 2 / 4 / 4;
+	}
+	.skills {
+		grid-area: 4 / 2 / 5 / 4;
+	}
+}
