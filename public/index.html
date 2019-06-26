@@ -1,132 +1,170 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en-US">
 	<head>
 		<meta charset="utf-8" />
 		<title>Justin Savala</title>
-		<meta name="description" content="" />
+		<meta name="description" content="Portfolio site for Justin Savala." />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="manifest" href="site.webmanifest" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="manifest" href="manifest.json" />
 		<link rel="apple-touch-icon" href="icon.png" />
 				<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-		<script src="https://kit.fontawesome.com/4f5371c0a2.js"></script>
 		<meta name="theme-color" content="#fafafa" />
 	</head>
 	<body>
 		<div class="portfolio">
 			<div id="signature" class="signature-center" style="display: none;">
-				<img src="images/Signature.png" />
+					<img src="images/Signature.png" alt="Justin Savala signature." />
 			</div>
 
 			<i id="scrollBtn" class="far fa-arrow-alt-circle-down fa-2x flash-pulse"></i>
 			<div class="parallax">
 				<div id="moon" class="bg-image">
-					<img src="images/Moon.jpg" />
+					<picture>
+						<source srcset="images/Moon.webp" type="image/webp">
+						<source srcset="images/Moon.jpg" type="image/jpg">
+						<img src="images/Moon.jpg" alt="Moon/Mercury/Mars" />
+					</picture>
 				</div>
 				<div class="parallax_group">
-					<div id="fence" class="bg-image parallax_layer parallax_layer-base">
-						<img src="images/Street.jpg" />
+					<div id="street" class="bg-image parallax_layer parallax_layer-base">
+						<picture>
+							<source srcset="images/Street.webp" type="image/webp">
+							<source srcset="images/Street.jpg" type="image/jpg">
+							<img src="images/Street.jpg" alt="Street" />
+						</picture>
 					</div>
 					<div class="parallax_layer parallax_layer-fore resume-grid">
 						<div class="about">
 							<p>
-								Hi my name is Justin and I love building webpages...
+								Hi my name is Justin and I love building apps!
 							</p>
 						</br>
 						<h5>
-							I work primarily with React and use Redux for state management. I've recently been experimenting with Redux-Observable which I find very interesting and incredibly useful. I enjoy building responsive web applications that allow users to intuitively navigate and use them.
+							I'm a self-taught developer focusing primarily on JavaScript and C#. Most of my projects are built using React and Redux for state management. I've recently been experimenting with Redux-Observable which I find very interesting and incredibly useful. I enjoy building responsive web applications that allow users to intuitively navigate and use them.
 						</h5>
 						<h5>
-							This webpage is built using plain HTML/JS/CSS and Webpack for rollup. The background images are photos that I have taken.
+							This webpage is built using plain HTML/JS/CSS and Webpack to package it up. The background images are all photos that I have taken. Check out the source code on <a href="https://github.com/Alavas/portfolio" target="_blank" rel="noopener" aria-label="View source code on GitHub.">GitHub</a>.
 						</h5>
 						<div style="text-align: center;">
 							<h4>
 								Check out my other projects.
 							</h4>
-							<i id="portfolioBtn" class="fas fa-hand-point-down fa-lg"></i>
+							<i id="portfolioBtn" class="fas fa-arrow-down fa-lg flash-pulse"></i>
 						</div>
 					</div>
 					<div id="resume" class="resume">
-							<h3>Experience</h3>
+							<h3 id="work">Work Experience</h3>
 						</div>
 						<div id="skills" class="skills">
-							<h3>Skills</h3>
+							<h3 id="dev">Development Skills</h3>
 						</div>
 					</div>
 				</div>
+				<div class="projects-header">
+					<h2>Projects</h2>
+				</div>
 				<div class="parallax_group">
 					<div id="tree"	class="bg-image parallax_layer parallax_layer-base">
-						<img src="images/Tree.jpg" />
+						<picture>
+							<source srcset="images/Tree.webp" type="image/webp">
+							<source srcset="images/Tree.jpg" type="image/jpg">
+							<img src="images/Tree.jpg" alt="Tree" />
+						</picture>
 					</div>
 					<div class="parallax_layer parallax_layer-fore project-grid">
 						<div class="top-screenshot screenshot">
-							<a href="https://www.phonetrivia.com" target="_blank">
-								<img src="images/PhoneTrivia.png"/>
+							<a href="https://www.phonetrivia.com" target="_blank" rel="noopener">
+								<picture>
+									<source srcset="images/PhoneTrivia.webp" type="image/webp">
+									<source srcset="images/PhoneTrivia.png" type="image/png">
+									<img src="images/PhoneTrivia.png" alt="Phone Trivia screenshot" />
+								</picture>
 							</a>
 						</div>
 						<div class="top-description">
-							<h2>Phone Trivia</h2>
+							<h2 id="phone">Phone Trivia</h2>
 							<h5>
-								Phone Trivia is a single or multi-player mobile centered trivia game. The backend of the database is based off of the open source trivia database from https://opentdb.com.
+								Phone Trivia is a single or multi-player mobile centered trivia game. The questions are sourced from the open source trivia database from https://opentdb.com. The game is built using React with Redux and Redux-Observable to manage the browser state with an Express/PostgreSQL backend. I'm actively working on this project and adding more features. Have a look at the repo <a href="https://github.com/Alavas/Phone_Trivia" target="_blank" rel="noopener" aria-label="View source code on GitHub.">Phone Trivia</a> or try out the game yourself at <a href="https://www.phonetrivia.com" target="_blank" rel="noopener" aria-label="Play the Phone Trivia game.">https://www.phonetrivia.com</a>.
 							</h5>
 						</div>
 						<div class="bottom-screenshot screenshot">
-							<a href="https://www.halyeda.com" target="_blank">
-								<img src="images/Halyeda.png"/>
+							<a href="https://www.halyeda.com" target="_blank" rel="noopener" aria-label="View Halyeda live.">
+								<picture>
+									<source srcset="images/Halyeda.webp" type="image/webp">
+									<source srcset="images/Halyeda.png" type="image/png">
+									<img src="images/Halyeda.png" alt="Halyeda screenshot" />
+								</picture>
 							</a>
 						</div>
 						<div class="bottom-description">
-							<h2>Halyeda</h2>
+							<h2 id="halyeda">Halyeda</h2>
 							<h5>
-								The Halyeda project is a datalogger setup to monitor conditions in and around my apartment. This is a carry over from an <a href="https://github.com/Alavas/Modbus_Datalogger" target="_blank">older project</a> that I built to monitor a hot water recirculation pump. It has since turned into a tool to combine the internal room temperature, light levels, and other external values to get a better picture of the environment. A small IOT device (Electric Imp) is used to gather the data and then send it to the backend server. Check out the <a href="https://github.com/Alavas/Halyeda" target="_blank">Github</a> page for more information.
+								The Halyeda project is a datalogger setup to monitor conditions in and around my apartment. This is a carry over from an <a href="https://github.com/Alavas/Modbus_Datalogger" target="_blank" rel="noopener" aria-label="View source code on GitHub.">older project</a> that I built to monitor a hot water recirculation pump. It has since turned into a tool to combine the internal room temperature, light levels, and other external values to get a better picture of the environment. A small IOT device (Electric Imp) is used to gather the data and then send it to the backend server. This project is also built with React/Redux frontend and an Express/Postgres backend. Check out the <a href="https://github.com/Alavas/Halyeda" target="_blank" rel="noopener" aria-label="View source code on GitHub.">GitHub</a> page for more information.
 							</h5>
 						</div>
 					</div>
 				</div>
 				<div class="parallax_group">
 					<div id="fence" class="bg-image parallax_layer parallax_layer-base">
-						<img src="images/Fence.jpg" />
+						<picture>
+							<source srcset="images/Fence.webp" type="image/webp">
+							<source srcset="images/Fence.jpg" type="image/jpg">
+							<img src="images/Fence.jpg" alt="Fence" />
+						</picture>
 					</div>
 					<div class="parallax_layer parallax_layer-fore project-grid">
 						<div class="top-screenshot screenshot">
-							<a href="https://alavas.github.io/reader-helper/" target="_blank">
-								<img src='images/CardDecoderTool.png'/>
+							<a href="https://alavas.github.io/reader-helper/" target="_blank" rel="noopener" aria-label="View source code on GitHub.">
+								<picture>
+									<source srcset="images/CardDecoderTool.webp" type="image/webp">
+									<source srcset="images/CardDecoderTool.png" type="image/png">
+									<img src='images/CardDecoderTool.png' alt="Card Decoder screenshot" />
+								</picture>
 							</a>
 						</div>
 						<div class="top-description">
-							<h2>Card Decoder Tool</h2>
+							<h2 id="card">Card Decoder Tool</h2>
 							<h6>
-								Add description...
+								The Card Decoder Tool is a utility to assist with the decoding of the raw binary values returned from a Wiegand RFID card reader. When you are working with unknown card types it is often necessary to find a known card number from within the raw value to determine which bits contain the card number. This tool assists with this process by doing the normally tedious conversion work for you. Along with this I have built an Arduino board that allows you to directly input data into the tool via USB. The <a href="https://github.com/Alavas/reader-helper" target="_blank" rel="noopener" aria-label="View source code on Github.">repository</a> also includes the Arduino code.
 							</h6>
 						</div>
 						<div class="bottom-screenshot screenshot">
-							<img src='images/ServerMonitor.png'/>
+							<picture>
+								<source srcset="images/ServerMonitor.webp" type="image/webp">
+								<source srcset="images/ServerMonitor.png" type="image/png">
+								<img src='images/ServerMonitor.png' alt="Server Monitor screenshot" />
+							</picture>
 						</div>
 						<div class="bottom-description">
-							<h2>Server Monitor</h2>
+							<h2 id="server">Server Monitor</h2>
 							<h6>
-								Add description...
+								I've recently had to deploy a large number of virtual machines with a assortment of Windows services that should be running at all times as well as a variety of hardware devices taht need to be online. To help keep track of this I build this <a href="https://github.com/Alavas/Server_Monitor" target="_blank" rel="noopener"
+									aria-label="View source code on Github.">Server Monitor</a> project to provide a visual representation of the state of all services and devices. There are 2 pieces to this project, the server side NodeJS monitoring service and the client page. This is a work in progress as I work to add some better state management to the client page.
 							</h6>
 						</div>
 					</div>
 				</div>
 				<footer class="portfolio-footer">
 					<div class="email-address">
-						<a href="mailto:justin@justinsavala.com" target="_top">
+						<a href="mailto:justin@justinsavala.com" target="_top" aria-label="Email Me">
 							<i class="far fa-paper-plane"></i>
 						</a>
-						<a href="https://github.com/alavas/" target="_blank">
+						<a href="https://github.com/alavas/" target="_blank" rel="noopener" aria-label="Check out my GitHub.">
 							<i class="fab fa-github"></i>
 						</a>
-						<a href="https://www.linkedin.com/in/justin-savala-468a13b5/" target="_blank">
+						<a href="https://www.linkedin.com/in/justin-savala-468a13b5/" target="_blank" rel="noopener" aria-label="Check out my LinkedIn.">
 							<i class="fab fa-linkedin-in"></i>
 						</a>
-						<a href="https://www.youtube.com/user/JSSavala" target="_blank">
+						<a href="https://www.youtube.com/user/JSSavala" target="_blank" rel="noopener" aria-label="Check out my YouTube channel.">
 							<i class="fab fa-youtube"></i>
 						</a>
 					</div>
 			</footer>
 			</div>
 		</div>
+	<script src="https://kit.fontawesome.com/4f5371c0a2.js"></script>
 	<script src="bundle.js"></script>
 	</body>
 </html>

@@ -59,6 +59,7 @@
 		"AWS (EC2, S3, Lambda)",
 		"Heroku",
 		"PowerShell",
-		"Firebase"
+		"Firebase",
+		"Git"
 	]
 }

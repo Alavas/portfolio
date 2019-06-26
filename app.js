@@ -2,13 +2,16 @@ require('./index.scss')
 require('babel-polyfill')
 var resume = require('./resume.json')
 const scrollBtn = document.getElementById('scrollBtn')
-const fence = document.getElementById('fence')
+const street = document.getElementById('street')
 const signature = document.getElementById('signature')
 const moon = document.getElementById('moon')
 const portfolioBtn = document.getElementById('portfolioBtn')
 const tree = document.getElementById('tree')
 
 window.addEventListener('load', function() {
+	setTimeout(function() {
+		window.scrollTo(0, 1)
+	}, 0)
 	const signature = document.getElementById('signature')
 	signature.style.display = 'block'
 })
@@ -16,7 +19,6 @@ window.addEventListener('load', function() {
 window.addEventListener(
 	'scroll',
 	function(event) {
-		console.log(event.srcElement.scrollTop)
 		if (event.srcElement.scrollTop > 80) {
 			signature.setAttribute('class', 'signature-small')
 			scrollBtn.style.display = 'none'
@@ -29,7 +31,7 @@ window.addEventListener(
 )
 
 scrollBtn.onclick = function() {
-	fence.scrollIntoView({ behavior: 'smooth' })
+	street.scrollIntoView({ behavior: 'smooth' })
 }
 
 portfolioBtn.onclick = function() {
@@ -56,14 +58,6 @@ jobs.map(job => {
 		let name = document.createTextNode(position[0])
 		positionName.appendChild(name)
 		list.appendChild(positionName)
-		/*
-		position[1].map(task => {
-			let taskName = document.createElement('h6')
-			let name = document.createTextNode(task)
-			taskName.appendChild(name)
-			resumeDiv.appendChild(taskName)
-		})
-		*/
 	})
 	resumeDiv.appendChild(list)
 })

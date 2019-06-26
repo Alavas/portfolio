@@ -8,8 +8,6 @@ module.exports = {
 		path: __dirname + '/public',
 		filename: 'bundle.js'
 	},
-	watch: true,
-	mode: 'development',
 	module: {
 		rules: [
 			{
@@ -61,7 +59,6 @@ module.exports = {
 		})
 	],
 	devServer: {
-		//hot: true,
 		publicPath: '/',
 		contentBase: './public',
 		inline: true,

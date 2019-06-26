@@ -16,7 +16,7 @@ html {
 
 body {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-family: 'Raleway', sans-serif;
 	width: 100vw;
 	height: 100vh;
@@ -31,17 +31,28 @@ h4,
 h5,
 h6,
 p {
-	margin: 5px;
+	margin: 2px;
 	padding: 0px;
 	font-weight: normal;
 	cursor: default;
+	text-shadow: 1px 1px black;
+}
+
+h2,
+h3 {
+	margin-bottom: 7px;
+	font-style: italic;
+	text-shadow: none;
 }
 
 ul {
 	margin: 0px;
-	//padding-left: 5px;
 	font-weight: normal;
 	cursor: default;
+}
+
+li {
+	font-size: 1em;
 }
 
 a {
@@ -65,13 +76,14 @@ a {
 	background: black;
 	position: relative;
 	.email-address {
-		font-size: 1.3em;
+		font-size: 1.5em;
 		position: absolute;
 		left: 15px;
 		bottom: 50%;
 		transform: translate(0%, 50%);
 		color: whitesmoke;
 		a {
+			margin-right: 10px;
 			text-decoration: none;
 			color: whitesmoke;
 		}
@@ -133,6 +145,12 @@ a {
 	}
 }
 
+.projects-header {
+	height: 3em;
+	color: white;
+	transform: translate(0%, 30%);
+}
+
 //Project grid.
 .project-grid {
 	display: grid;
@@ -175,8 +193,8 @@ a {
 .resume-grid {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 2fr 1fr 1fr 2fr;
-	grid-template-rows: 10px 2fr 2fr 1fr 40px;
+	grid-template-columns: 50px 1fr 1fr 50px;
+	grid-template-rows: 10px 2fr 2fr 1fr 10px;
 	align-items: center;
 }
 
@@ -193,18 +211,18 @@ a {
 	min-width: 0;
 	text-align: left;
 	color: whitesmoke;
-	grid-area: 2 / 2 / 7 / 4;
+	grid-area: 3 / 2 / 4 / 4;
 }
 .skills {
 	color: whitesmoke;
 	text-align: left;
-	grid-area: 8 / 2 / 9 / 4;
+	grid-area: 4 / 2 / 5 / 4;
 	.skill {
 		margin-bottom: 6px;
 		float: left;
 		display: block;
 		background: #26a69a;
-		min-width: 3rem;
+		min-width: 2rem;
 		padding: 0 5px;
 		margin-right: 7px;
 		text-align: center;
@@ -266,6 +284,7 @@ a {
 }
 
 .flash-pulse {
+	margin-top: 5px;
 	-webkit-animation: fp linear 2s infinite;
 	animation: fp linear 2s infitie;
 }
@@ -294,10 +313,81 @@ a {
 	}
 }
 
-@media only screen and (max-width: 600px) {
+//Highlight Headers
+#work::before {
+	content: 'Work Experience';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+#dev::before {
+	content: 'Development Skills';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+#phone::before {
+	content: 'Phone Trivia';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+#halyeda::before {
+	content: 'Halyeda';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+#card::before {
+	content: 'Card Decoder Tool';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+#server::before {
+	content: 'Server Monitor';
+	color: rgba(255, 255, 255, 0);
+	background: rgba(255, 0, 0, 0.25);
+	height: inherit;
+	padding: 5px;
+	position: absolute;
+	transform: skew(-12deg) translate(-2.5px, -5px);
+}
+
+@media only screen and (min-width: 1000px) {
+	.resume-grid {
+		grid-template-columns: 0.75fr 1fr 1fr 0.75fr;
+	}
+}
+
+@media only screen and (max-width: 750px) {
 	body {
 		font-size: 0.9em;
 		line-height: 0.9em;
+	}
+
+	li {
+		font-size: 0.8em;
 	}
 	//Signature styles.
 	.signature-center {
@@ -322,7 +412,7 @@ a {
 	//Project grid.
 	.project-grid {
 		grid-template-columns: 10px 1fr 1fr 10px;
-		grid-template-rows: 10px 1fr 5px 1fr 5px 1fr 5px 1fr 10px;
+		grid-template-rows: 20px 1fr 5px 1fr 5px 1fr 5px 1fr 30px;
 	}
 
 	.top-screenshot {
@@ -330,7 +420,6 @@ a {
 	}
 
 	.top-description {
-		background: none;
 		color: whitesmoke;
 		grid-area: 2 / 2 / 3 / 4;
 	}
@@ -340,7 +429,6 @@ a {
 	}
 
 	.bottom-description {
-		background: none;
 		color: whitesmoke;
 		grid-area: 6 / 2 / 7 / 4;
 	}
@@ -348,6 +436,12 @@ a {
 	.portfolio-footer {
 		height: 40px;
 		background: black;
+		.email-address {
+			font-size: 1.2em;
+		}
+		a {
+			margin-right: 10px;
+		}
 	}
 
 	.resume-grid {
