@@ -1,6 +1,4 @@
 var webpack = require('webpack')
-var Fiber = require('fibers')
-var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
 	entry: { app: './app.js' },
@@ -14,24 +12,6 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader'
-			},
-			{
-				test: /\.scss$/,
-				use: [
-					{
-						loader: 'style-loader'
-					},
-					{
-						loader: 'css-loader'
-					},
-					{
-						loader: 'sass-loader',
-						options: {
-							implementation: require('sass'),
-							fiber: Fiber
-						}
-					}
-				]
 			},
 			{
 				test: /\.js$/,
@@ -52,10 +32,6 @@ module.exports = {
 					asi: true
 				}
 			}
-		}),
-		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css'
 		})
 	],
 	devServer: {

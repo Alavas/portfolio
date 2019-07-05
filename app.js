@@ -1,13 +1,31 @@
-require('./index.scss')
 require('babel-polyfill')
 var resume = require('./resume.json')
+
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+//Elements.
 const scrollBtn = document.getElementById('scrollBtn')
+const portfolioBtn = document.getElementById('portfolioBtn')
 const street = document.getElementById('street')
 const signature = document.getElementById('signature')
 const moon = document.getElementById('moon')
-const portfolioBtn = document.getElementById('portfolioBtn')
 const tree = document.getElementById('tree')
+const resumeDiv = document.getElementById('resume')
+const skillsDiv = document.getElementById('skills')
+//Scroll to specific sections.
+scrollBtn.onclick = function() {
+	street.scrollIntoView({ behavior: 'smooth' })
+}
 
+portfolioBtn.onclick = function() {
+	tree.scrollIntoView({ behavior: 'smooth' })
+}
+
+signature.onclick = function() {
+	moon.scrollIntoView({ behavior: 'smooth' })
+}
+//Listeners.
 window.addEventListener('load', function() {
 	setTimeout(function() {
 		window.scrollTo(0, 1)
@@ -29,23 +47,8 @@ window.addEventListener(
 	},
 	true
 )
-
-scrollBtn.onclick = function() {
-	street.scrollIntoView({ behavior: 'smooth' })
-}
-
-portfolioBtn.onclick = function() {
-	tree.scrollIntoView({ behavior: 'smooth' })
-}
-
-signature.onclick = function() {
-	moon.scrollIntoView({ behavior: 'smooth' })
-}
-
-const resumeDiv = document.getElementById('resume')
-const skillsDiv = document.getElementById('skills')
+//Resume
 const jobs = Object.entries(resume.experience)
-
 jobs.map(job => {
 	let jobName = document.createElement('h4')
 	let name = document.createTextNode(job[0])
