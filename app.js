@@ -3,6 +3,7 @@ var resume = require('./resume.json')
 
 let vh = window.innerHeight * 0.01
 document.documentElement.style.setProperty('--vh', `${vh}px`)
+console.log(vh)
 
 //Elements.
 const scrollBtn = document.getElementById('scrollBtn')
@@ -72,21 +73,3 @@ resume.skills.map((skill, index) => {
 	span.appendChild(text)
 	skillsDiv.appendChild(span)
 })
-
-/*
-<script>
-	window.ga = function() {
-		ga.q.push(arguments)
-	}
-	ga.q = []
-	ga.l = +new Date()
-	ga('create', 'UA-XXXXX-Y', 'auto')
-	ga('set', 'transport', 'beacon')
-	ga('send', 'pageview')
-</script>
-<script
-	src="https://www.google-analytics.com/analytics.js"
-	async
-	defer
-></script>
-*/
